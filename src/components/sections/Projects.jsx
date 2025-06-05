@@ -17,7 +17,7 @@ const projectList = [
       "Presentation",
       "Requirement Analysis",
     ],
-    githubLink: "#",
+    githubLink: "https://github.com/AlberthMartin/CashierSystem",
   },
   {
     title: "Business Website",
@@ -32,7 +32,7 @@ const projectList = [
       "Requirement Analysis",
       "Communication",
     ],
-    githubLink: "#",
+    githubLink: "https://bouppteckning.fi",
   },
   // You can easily add more projects here
 ];

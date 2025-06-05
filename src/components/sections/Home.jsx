@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="py-60 md:py-60 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-indigo-500/10 to-slate-800"
+      className="py-56 md:py-56 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-indigo-500/10 to-slate-800"
     >
       {/* Content */}
       <div className="text-center z-20 mx-18">
@@ -48,7 +48,7 @@ export const Home = () => {
             href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F1F5F9] hover:text-red-500 transition-all"
+            className="text-[#F1F5F9] hover:text-indigo-400 transition-all"
           >
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
