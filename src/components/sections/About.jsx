@@ -1,9 +1,25 @@
-
-
 export const About = () => {
-  const frontendSkills = ["React", "TailwindCSS", "JavaFX", "SceneBuilder"];
-  const backendSkills = ["Java", "JavaScript", "Python", "NodeJs", "MongoDB", "Express", "Github"];
-  const softSkills = ["Agile development", "Communication", "Requirement Analysis", "Problem Solving"];
+  const frontendSkills = [
+    "React",
+    "TailwindCSS",
+    "ChakraUI",
+    "JavaFX",
+    "SceneBuilder",
+  ];
+  const backendSkills = [
+    "JavaScript",
+    "Node.js",
+    "MongoDB",
+    "Express",
+    "Github",
+    "Java",
+  ];
+  const softSkills = [
+    "Team Collaboration",
+    "Client Collaboration",
+    "Requirement Analysis",
+    "Problem Solving",
+  ];
 
   return (
     <section
@@ -14,46 +30,84 @@ export const About = () => {
         <h2 className="text-4xl font-semibold mb-12 text-center">About Me</h2>
 
         {/* Intro */}
-        <p className="text-slate-300 text-lg leading-relaxed mb-12 md:text-justify">
-          I am a fourth-year Computer Engineering student with a strong academic record and a growing portfolio of
-          real-world development experience. I have excelled in core computer science subjects, earning the highest
-          possible grade (5/5) in Algorithms, Data Structures, Object-Oriented Design, Software Engineering, Software
-          Requirements Analysis, Databases, Introduction to Cybersecurity and Operating Systems. My fluency in English
-          and Swedish, along with conversational Finnish, enables effective communication in diverse, collaborative
-          environments. Through my university studies, I’ve also gained extensive experience working in teams,
-          developing both technical and interpersonal skills essential for successful group projects.
-        </p>
+        <div className="align-content text-slate-300 text-xm leading-relaxed mb-12 md:text-justify space-y-6">
+          <p>
+            I’m a Master’s student in Computer Engineering student with top
+            academic performance and hands-on experience building full-stack and
+            front-end applications. I’ve earned the highest grade (5/5) in key
+            computer science courses including Algorithms and Data Structures,
+            Object-Oriented Design, Software Engineering, Databases,
+            Cybersecurity and Operating Systems.
+          </p>
+          <p>
+            Alongside my studies, I’ve designed, built, and deployed full-stack
+            and front-end applications using technologies such as React,
+            Node.js, MongoDB, and Express. These projects have deepened my
+            skills in both backend architecture and modern UI development.
+          </p>
+
+          <p>
+            My fluency in English and Swedish, combined with conversational
+            Finnish, supports effective communication in collaborative
+            environments. University projects have further strengthened my
+            ability to work in diverse teams and deliver results under
+            deadlines.
+          </p>
+
+          <p>
+            I’m now seeking a summer trainee position where I can contribute
+            with real development skills, grow as a software engineer, and gain
+            experience in a professional setting.
+          </p>
+        </div>
 
         {/* Education */}
         <div className="mb-12">
-          <h3 className="text-2xl mb-4">Education</h3>
-          <div className="pl-4 border-l-4 border-indigo-400">
-            <p className="font-semibold">
-              Bachelorʼs Program in Information Technology, Computer Engineering{" "}
-              <span className="italic">2022 -2025</span>
+          <h3 className="text-2xl mb-6 text-white">Education</h3>
+
+          {/* Bachelor's Degree */}
+          <div className="pl-5 border-l-4 border-indigo-400 space-y-3">
+            <p className="text-xl font-semibold text-white">
+              Bachelor’s Program in Information Technology, Computer Engineering{" "}
+              <span className="italic text-slate-300">(2022 – 2025)</span>
             </p>
 
-            <p className="text-slate-300 mt-1 italic">
-              Data Structures: 5/5, Algorithms: 5/5, Databases: 5/5, Software Engineering: 5/5, Object-Oriented Design
-              5/5, Software Requirements Analysis 5/5, Introduction to Cybersecurity 5/5, Web Development: 4/5
+            <p className="text-slate-300 italic">
+              Data Structures: 5/5, Algorithms: 5/5, Databases: 5/5, Software
+              Engineering: 5/5, Object-Oriented Design: 5/5, Software
+              Requirements Analysis: 5/5, Introduction to Cybersecurity: 5/5,
+              Web Development: 4/5
             </p>
-            <p className="mt-4 text-slate-300">
-              Bachelor's thesis on: "Using Convolutional Neural Networks for Network Intrusion Detection" <br />
-              Received the highest possible grade (5/5) from a well-regarded professor with extensive publications in
-              the field.{" "}
-              <a
-                href="https://research.abo.fi/en/persons/dragos-truscan/publications/"
-                target="_blank"
-                className="text-white underline hover:text-indigo-300 transition"
-              >
-                Dragos Truscan
-              </a>
-            </p>
+
+            <div className="text-slate-300">
+              <p className="font-bold text-white mb-1">
+                Bachelor's thesis on:{" "}
+                <span className="italic">
+                  “Using Convolutional Neural Networks for Network Intrusion
+                  Detection”
+                </span>
+              </p>
+              <p>
+                Received the highest grade (5/5) under supervision of{" "}
+                <a
+                  href="https://research.abo.fi/en/persons/dragos-truscan/publications/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-white hover:text-indigo-300 transition"
+                >
+                  Professor Dragos Truscan
+                </a>
+                , a recognized researcher in the field.
+              </p>
+            </div>
           </div>
-          <div className="pl-4 mt-6 border-l-4 border-indigo-400">
-            <p className="font-semibold">
-              Master’s­ Degree­ Pro­gramme­ in­ Information Tech­nology, Computer Engineering,{" "}
-              <span className="italic">2025 - 2027</span>
+
+          {/* Master's Degree */}
+          <div className="pl-5 mt-8 border-l-4 border-indigo-400">
+            <p className="text-white text-lg font-semibold">
+              Master’s Degree Programme in Information Technology, Computer
+              Engineering{" "}
+              <span className="italic text-slate-300">(2025 – 2027)</span>
             </p>
           </div>
         </div>
@@ -63,10 +117,10 @@ export const About = () => {
           <h3 className="text-2xl mb-6">Technologies</h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[ 
+            {[
               { title: "Frontend", skills: frontendSkills },
               { title: "Backend", skills: backendSkills },
-              { title: "Soft Skills", skills: softSkills }
+              { title: "Soft Skills", skills: softSkills },
             ].map((section, i) => (
               <div className="relative h-full flex flex-col" key={i}>
                 <div className="relative flex flex-col flex-1 bg-black z-10 p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(99,102,241,0.5)] transition-all">

@@ -1,40 +1,96 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { useState } from "react";
+import { ProjectCard } from "../ProjectCard";
 
 // Project data
 const projectList = [
   {
-    title: "POS system",
+    title: "Training Management System",
+    shortSummary:
+      "Full-stack app for creating and managing personalized workout programs with secure authentication and modern, responsive UI.",
     description:
-      "Point of sale system to manage in-store sales, track products and discounts, print receipts, and gather sales statistics. Developed competitively within a team.",
+      "A full-stack web application for managing personalized training programs. Users can create, edit, and delete workouts composed of exercises with customizable sets, reps, weights, and rest times.\n The app features secure JWT-based authentication, responsive light/dark mode, and intuitive UI built with Chakra UI. Users can also manage their exercise library directly within the app. Designed with modern UX principles and built to scale — with new features continuously in development.",
     technologies: [
-      "JavaFX",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "React",
+      "ChakraUI",
+      "JWT Authentication",
+      "UI/UX Design",
+    ],
+    githubLink: "https://github.com/AlberthMartin/TrainingManagementSystem",
+    webSiteLink: "",
+  },
+
+  {
+    title: "Business Website",
+    shortSummary:
+      "Professional website developed collaboratively for a law firm, including client requirements, design presentations, and successful delivery.",
+    description:
+      "Collaboratively developed a professional website for a law firm from the ground up. Led the requirements gathering process, presented design drafts to the client, and delivered a polished final product that received excellent feedback.",
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Github",
+      "Team Collaboration",
+      "Presentation",
+      "Client Collaboration",
+      "Requirement Engineering",
+      "UI/UX",
+    ],
+    githubLink: "https://github.com/AlberthMartin/bouppteckning",
+    webSiteLink: "https://bouppteckning.fi",
+  },
+  {
+    title: "Home Automation Project",
+    shortSummary:
+      "Smart home system integrating 50+ devices with custom dashboards and automations that helps daily routines.",
+    description:
+      "Developed a smart home automation system for a real client using Home Assistant. Integrated over 50 smart devices like lights, sensors, speakers, and switches into an intuitive dashboard.\n Designed clean, responsive room-based views and implemented automations such as a 'Good Morning' routine that starts lights, music, and coffee. Included smart utility features like a button to turn off all lights and real-time device status tracking. The system significantly improved the client’s daily routines and is used daily to control the home environment.",
+    technologies: [
+      "Home Assistant",
+      "YAML Automations",
+      "Smart Home Integration",
+      "UI Design",
+      "IoT",
+      "Custom Dashboards",
+      "Client Collaboration",
+    ],
+    githubLink: "",
+    webSiteLink: "",
+    images: [
+      {
+        label: "Main Dashboard",
+        src: "/images/HomeAssistant_Main_Dasboard.png",
+      },
+      {
+        label: "Enitites Overview",
+        src: "/images/HomeAssistantProjectEntities.png",
+      },
+      {
+        label: "Lights Dashboard",
+        src: "/images/HomeAssistant_LightsDashboard.png",
+      },
+    ],
+  },
+  {
+    title: "POS system",
+    shortSummary:
+      "University team project: a full-featured Point of Sale system handling sales, discounts, receipts, and hardware API integration.",
+    description:
+      "Built a fully functional Point of Sale system as part of a university course team project. The system handles in-store transactions, product and discount management, receipt printing, and sales statistics.\n Integrated with external REST APIs for a cashbox, card reader, and receipt printer to simulate real-world hardware interactions. Developed using agile practices with a focus on usability, modularity, and teamwork.",
+    technologies: [
       "Java",
+      "JavaFX",
       "Github",
       "Agile development",
-      "Teamwork",
-      "Presentation",
+      "Team Collaboration",
+      "Presentation Skills",
       "Requirement Analysis",
     ],
     githubLink: "https://github.com/AlberthMartin/CashierSystem",
+    webSiteLink: "",
   },
-  {
-    title: "Business Website",
-    description:
-      "Built a lawyer business website with a friend from scratch. Gathered requirements, presented to the client, and delivered successfully with great feedback.",
-    technologies: [
-      "React",
-      "Github",
-      "Pair Programming",
-      "Presentation",
-      "Client Management",
-      "Requirement Analysis",
-      "Communication",
-    ],
-    githubLink: "https://bouppteckning.fi",
-  },
-  // You can easily add more projects here
 ];
 
 export const Projects = () => {
@@ -49,45 +105,9 @@ export const Projects = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Project Card */}
           {projectList.map((project, index) => (
-            <div key={index} className="relative">
-              {/* Background glow 
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-300 blur-xl opacity-30 animate-pulse z-0"></div>
-*/}
-              {/* Project Card */}
-              <div className="relative bg-black z-10 p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-indigo-500 hover:shadow-[0_0_20px_rgba(99,102,241,0.5)] transition-all flex flex-col h-full">
-                <h3 className="text-xl text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, key) => (
-                    <span
-                      key={key}
-                      className="bg-blue-500/10 text-indigo-400 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-auto">
-                  <a
-                    href={project.githubLink}
-                    className="text-indigo-400 hover:text-indigo-300 transition-colors mx-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faGithub} size="2x" />
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    className="text-indigo-400 hover:text-indigo-300 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FontAwesomeIcon icon={faYoutube} size="2x"/>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
       </div>

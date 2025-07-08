@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="py-56 md:py-56 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-indigo-500/10 to-slate-800"
+      className="py-52 md:py-52 flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-indigo-500/10 to-slate-800"
     >
       {/* Content */}
       <div className="text-center z-20 mx-18">
@@ -14,8 +14,8 @@ export const Home = () => {
           Alberth Martin
         </h1>
 
-        <p className="text-slate-400 text-xl mb-8 max-w-lg mx-auto rounded-xl font-medium">
-        Driven Computer Engineering Student | Fast Learner | Future Software Innovator!
+        <p className="text-slate-300 text-xl mb-8 max-w-lg mx-auto rounded-xl font-medium">
+        Master’s Student in Computer Engineering | Full-Stack Developer | Passionate About Building Scalable Solutions
         </p>
 
         {/* Buttons */}
@@ -35,7 +35,7 @@ export const Home = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center space-x-6 ">
+        <div className="flex flex-col items-center space-y-2">
           <a
             href="https://github.com/AlberthMartin"
             target="_blank"
@@ -45,6 +45,17 @@ export const Home = () => {
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a
+            href="https://github.com/AlberthMartin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#F1F5F9] hover:text-indigo-400 transition-all"
+          >
+            https://github.com/AlberthMartin
+          </a>
+
+          
+          {/** 
+          <a
             href=""
             target="_blank"
             rel="noopener noreferrer"
@@ -52,6 +63,7 @@ export const Home = () => {
           >
             <FontAwesomeIcon icon={faYoutube} size="2x" />
           </a>
+          */}
         </div>
       </div>
     </section>
